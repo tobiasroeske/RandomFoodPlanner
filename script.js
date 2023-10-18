@@ -15,4 +15,9 @@ const lunch = ['Sandwich', 'Quinoa salad', 'Lentils salad', 'Empanada'];
 const dinner = ['Curry', 'Pasta with Pesto', 'Risotto', 'Burker King'];
 
 
+const chosenDay = () => {
+    let randomDay = days[Math.floor(Math.random() * 7)];
+    return `Today is ${randomDay} and here are some meal suggestions for your day:`
+}
+
 
