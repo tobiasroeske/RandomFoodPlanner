@@ -17,7 +17,21 @@ const dinner = ['Curry', 'Pasta with Pesto', 'Risotto', 'Burker King'];
 
 const chosenDay = () => {
     let randomDay = days[Math.floor(Math.random() * 7)];
-    return `Today is ${randomDay} and here are some meal suggestions for your day:`
+    return `Today is ${randomDay} and here are some meal suggestions for your day:`;
 }
 
+const chosenBreakfast = () => {
+    let randomBreakfast = breakfast[Math.floor(Math.random()*4)];
+    return `The best choice for your breakfast today will be ${randomBreakfast}`;
+}
+
+const chosenLunch = () => {
+    let randomLunch = lunch[Math.floor(Math.random()*4)];
+    return `And for Lunch we would recommend ${randomLunch}`;
+}
+
+const chosenDinner = () => {
+    let randomDinner = dinnerMath.floor(Math.random()*4);
+    return `To end your day we think ${randomDinner} is the best option for this day`;
+}
 
