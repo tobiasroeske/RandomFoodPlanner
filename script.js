@@ -1,7 +1,6 @@
 // First Array with Weekdays:
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-console.log(days);
 
 // Second array with breakfast options:
 const breakfast = ['Musli', 'Porridge', 'Zopf', 'Toast with fried egg'];
@@ -27,11 +26,20 @@ const chosenBreakfast = () => {
 
 const chosenLunch = () => {
     let randomLunch = lunch[Math.floor(Math.random()*4)];
+    if (randomLunch === 'Sandwich') {
+        return `And for Lunch we would recommend a ${randomLunch}`;
+    } else {
     return `And for Lunch we would recommend ${randomLunch}`;
+    }
 }
 
 const chosenDinner = () => {
-    let randomDinner = dinnerMath.floor(Math.random()*4);
-    return `To end your day we think ${randomDinner} is the best option for this day`;
+    let randomDinner = dinner[Math.floor(Math.random()*4)];
+    return `To end your day we think ${randomDinner} would the best option`;
 }
 
+console.log('Good morning :-)');
+console.log(chosenDay());
+console.log(chosenBreakfast());
+console.log(chosenLunch());
+console.log(chosenDinner());
