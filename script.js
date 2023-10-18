@@ -14,18 +14,26 @@ const lunch = ['Sandwich', 'Quinoa salad', 'Lentils salad', 'Empanada'];
 const dinner = ['Curry', 'Pasta with Pesto', 'Risotto', 'Burker King'];
 
 
+// chooses a random day from the days array
 const chosenDay = () => {
     let randomDay = days[Math.floor(Math.random() * 7)];
     return `Today is ${randomDay} and here are some meal suggestions for your day:`;
 }
 
+// Creates a random Number to address the index of the lunch and dinner arrays
+let randomNumber = () => {
+    return Math.floor(Math.random) * 4;
+}
+
+// chooses random breakfast from breakfast array
 const chosenBreakfast = () => {
-    let randomBreakfast = breakfast[Math.floor(Math.random()*4)];
+    let randomBreakfast = breakfast[randomNumber()];
     return `The best choice for your breakfast today will be ${randomBreakfast}`;
 }
 
+// chooses random lunch from lunch array
 const chosenLunch = () => {
-    let randomLunch = lunch[Math.floor(Math.random()*4)];
+    let randomLunch = lunch[randomNumber()];
     if (randomLunch === 'Sandwich') {
         return `And for Lunch we would recommend a ${randomLunch}`;
     } else {
@@ -33,13 +41,18 @@ const chosenLunch = () => {
     }
 }
 
+// chooses random dinner from dinner array
 const chosenDinner = () => {
     let randomDinner = dinner[Math.floor(Math.random()*4)];
     return `To end your day we think ${randomDinner} would the best option`;
 }
 
-console.log('Good morning :-)');
-console.log(chosenDay());
-console.log(chosenBreakfast());
-console.log(chosenLunch());
-console.log(chosenDinner());
+const finalMessage = () => {
+    console.log('Good morning :-)');
+    console.log(chosenDay());
+    console.log(chosenBreakfast());
+    console.log(chosenLunch());
+    console.log(chosenDinner());
+}
+
+finalMessage();
